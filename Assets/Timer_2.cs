@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Timer_2 : MonoBehaviour
+{
+    public float timeRemaining = 10f; // Время которое осталось
+    public Text timerText; // Текстовый элемент для отображения времени
+
+    void Update()
+    {
+        if (timeRemaining > 0) // Если время не закончилось
+        {
+            timeRemaining -= Time.deltaTime; // Уменьшаем время
+            timerText.text = "Time: " + Mathf.Round(timeRemaining).ToString(); // Обновляем текст таймера
+        }
+        else
+        {
+            timerText.text = "Time`s up!"; // Если время закончилось
+        }
+    }
+}

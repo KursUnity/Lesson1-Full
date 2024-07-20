@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveObject : MonoBehaviour
@@ -10,7 +12,6 @@ public class MoveObject : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical"); // Получаем вертикальное движение
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical); // Создаем вектор движения
-
-        transform.Translate(movement * speed * Time.deltaTime); // Перемещаем объект
+        transform.Translate(movement * speed * Time.deltaTime);
     }
 }
